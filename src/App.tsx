@@ -25,16 +25,16 @@ function App() {
   const gen = useRef(solve(input));
 
   useInterval(() => {
-    gen.current.next();
-    gen.current.next();
-    gen.current.next();
-    gen.current.next();
-    gen.current.next();
-    gen.current.next();
-    gen.current.next();
-    gen.current.next();
-    gen.current.next();
-    const nextNodes = gen.current.next().value;
+    let nextNodes = gen.current.next().value;
+    nextNodes = gen.current.next().value || nextNodes;
+    nextNodes = gen.current.next().value || nextNodes;
+    nextNodes = gen.current.next().value || nextNodes;
+    nextNodes = gen.current.next().value || nextNodes;
+    nextNodes = gen.current.next().value || nextNodes;
+    nextNodes = gen.current.next().value || nextNodes;
+    nextNodes = gen.current.next().value || nextNodes;
+    nextNodes = gen.current.next().value || nextNodes;
+    nextNodes = gen.current.next().value || nextNodes;
     console.log('nextNodes:', nextNodes)
     if(nextNodes){
       setNodes(nextNodes);

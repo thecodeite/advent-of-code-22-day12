@@ -29,6 +29,13 @@
       border: 1px solid black;
       padding: 1px;
     }
+    &.selected{
+      // border: 2px solid yellow;
+      // padding: 0px;
+      span {
+        background-color: hsl(240, 100%, 50%);
+      }
+    }
 
     span {
       position: absolute;
