@@ -1,0 +1,65 @@
+.Map {
+  margin: 8px;
+  display: grid;
+  grid-template-columns: repeat(80, 1fr);
+  grid-template-rows: repeat(40, 1fr);
+  width: 200px;
+  height: 200px;
+  gap: 4px;
+
+  .Cell {
+    width: 16px;
+    height: 16px;
+    // overflow: hidden;
+    border: 0.5px solid black;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    border-radius: 50%;
+
+    &.unset{
+      border: 2px solid blue;
+      padding: 0px;
+    }
+    &.unknown, &.set{
+      border: 1px solid black;
+      padding: 1px;
+    }
+
+    span {
+      position: absolute;
+      z-index: 1;
+      font-size: 0.9rem;
+      color: black;
+      width: 8px;
+      height: 8px;
+      transform: rotate(45deg);
+
+      &.top {
+        top: 20px;
+        border-left: 1px solid black;
+        border-top: 1px solid black;
+      }
+      
+      &.bottom {
+        bottom: 20px;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+      }
+      &.left {
+        left: 20px;
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+      }
+      &.right {
+        right: 20px;
+        border-top: 1px solid black;
+        border-right: 1px solid black;
+      }
+    }
+  }
+}
